@@ -69,6 +69,18 @@ const controller = {
       res.status(400).json({ message: 'userId is required' });
 
       return;
+    } else if (!expense.spentAt) {
+      res.status(400).json({ message: 'date of spending is required' });
+
+      return;
+    } else if (!expense.title) {
+      res.status(400).json({ message: 'title is required' });
+
+      return;
+    } else if (!expense.amount) {
+      res.status(400).json({ message: 'amount is required' });
+
+      return;
     }
 
     const user = await userModel.getUser(expense.userId);

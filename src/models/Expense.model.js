@@ -17,7 +17,6 @@ const Expense = sequelize.define(
     spentAt: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     title: {
       type: DataTypes.STRING,
